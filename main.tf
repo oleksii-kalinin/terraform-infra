@@ -1,6 +1,7 @@
 resource "random_string" "s3_bucket_name" {
   length = 8
   special = false
+  lower = true
 }
 
 resource "aws_s3_bucket" "terraform_state" {
