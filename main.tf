@@ -4,7 +4,7 @@ resource "random_string" "s3_bucket_name" {
 }
 
 resource "aws_s3_bucket" "terraform_state" {
-  bucket_name = "${random_string.s3_bucket_name.id}-state"
+  bucket = "${random_string.s3_bucket_name.id}-state"
 
   tags = {
     Owner = "terraform"
