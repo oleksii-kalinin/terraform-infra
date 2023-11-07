@@ -112,3 +112,6 @@ fabric.properties
 .idea/caches/build_file_checksums.ser
 /.idea/01.iml
 /.idea/vcs.xml
+/.idea/.gitignore
+/.idea/infra.iml
+/.idea/modules.xml
