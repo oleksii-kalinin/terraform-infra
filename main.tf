@@ -22,8 +22,7 @@ resource "aws_s3_bucket_versioning" "terraform_state" {
 resource "aws_dynamodb_table" "terraform_lock" {
   name = "${random_string.s3_bucket_name.id}-lock"
   hash_key = "LockID"
-  read_capacity = 20
-  write_capacity = 20
+  billing_mode = "PAY_PER_REQUEST"
 
   attribute {
     name = "LockID"
